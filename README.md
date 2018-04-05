@@ -1,2 +1,2 @@
-# Time-Calc
+# Time-Calculator
 Calculator for Time Strings
