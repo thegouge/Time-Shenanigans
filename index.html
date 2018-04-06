@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+
     <title>Calculate Time!</title>
 </head>
 <body>
-    Hold up on that for just a sec...
+    <table id="calc">
+        <thead>
+            <tr>
+                <th colspan="5" id="title">Time Calculator!</th>
+            </tr>
+            <tr>
+                <td colspan="3" id="output"></td>
+                <td class="button operator" id="c">C</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="button" id="h">Hour</td>
+                <td class="button" id="m">Minute</td>
+                <td class="button" id="s">Second</td>
+                <td class="button operator" id="x">&times;</td>
+            </tr>
+            <tr>
+                <td class="button" id="1">1</td>
+                <td class="button" id="2">2</td>
+                <td class="button" id="3">3</td>
+                <td class="button operator" id="d">/</td>
+            </tr>
+            <tr>
+                <td class="button" id="4">4</td>
+                <td class="button" id="5">5</td>
+                <td class="button" id="6">6</td>
+                <td class="button operator" id="pl">+</td>
+            </tr>
+            <tr>
+                <td class="button" id="7">7</td>
+                <td class="button" id="8">8</td>
+                <td class="button" id="9">9</td>
+                <td class="button operator" id="min">-</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="button" id="0">0</td>
+                <td class="button" id="del">DEL</td>
+                <td class="button operator" id="equals">=</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="./input.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
