@@ -16,8 +16,9 @@ td, th {
     background: white;
     border-collapse: collapse;
     width: 337px;
-    height: 291px;
+    height: 239px;
     margin: auto;
+    margin-top: 10px;
     border: 5px solid silver;
 }
 
