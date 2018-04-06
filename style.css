@@ -3,7 +3,7 @@
 }
 
 body {
-    background: rgb(83, 83, 83);
+    background: rgb(24, 26, 61);
 }
 
 td, th {
@@ -15,9 +15,9 @@ td, th {
 #calc {
     background: white;
     border-collapse: collapse;
-    height: 200px;
+    width: 337px;
+    height: 291px;
     margin: auto;
-    margin-top: 50px;
     border: 5px solid silver;
 }
 
@@ -33,6 +33,7 @@ td, th {
 .button:hover {
     background: rgb(255, 210, 167);
     cursor: pointer;
+    transition: 0.5s;
 }
 
 #title {
