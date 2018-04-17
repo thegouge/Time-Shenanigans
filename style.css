@@ -25,6 +25,7 @@ td, th {
 .button {
     text-align: center;
     width: 96px;
+    user-select: none;
 }
     .operator {
         border-right: 5px solid silver;

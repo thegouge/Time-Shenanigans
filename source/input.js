@@ -46,15 +46,15 @@ function input(button) {
             break;
 
         case "h":
-            output.innerHTML += "h ";
+            output.innerHTML += "h";
             break;
 
         case "m":
-            output.innerHTML += "m ";
+            output.innerHTML += "m";
             break;
 
         case "s":
-            output.innerHTML += "s ";
+            output.innerHTML += "s";
             break;
 
         case "x":
