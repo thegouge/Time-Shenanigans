@@ -74,6 +74,9 @@ function input(button) {
             break;
 
         case "del":
+            if(output.innerHTML.slice(-1) == " ") {
+                output.innerHTML = output.innerHTML.slice(0, output.innerHTML.length - 2);
+            }
             output.innerHTML = output.innerHTML.slice(0, output.innerHTML.length - 1);
             break;
 

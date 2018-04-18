@@ -30,38 +30,8 @@ buttons.forEach(function(button) {
     });
 });
 
-function toSeconds(string) {
-    var hours, minutes, seconds = [];
-
-    console.log(string.match(/[hms]/));
-
-    switch(string.match(/[hms]/)[0]) {
-        case "h":
-            hours = string.split('h');
-            minutes = hours[1].split('m');
-            seconds = minutes[1].split('s')[0];
-            hours = hours[0];
-            minutes = minutes[0];
-            break;
-        case "m":
-            minutes = string.split('m');
-            seconds = minutes[1].split('s')[0];
-            minutes = minutes[0];
-            hours = 0;
-            break;
-        case "s":
-            hours = 0;
-            minutes = 0;
-            seconds = string.split('s');
-            break;
-    }
-
-    minutes = parseInt(minutes) + hours*60;
-    seconds = parseInt(seconds) + minutes*60;
-    console.log(seconds);
-}
-
 function calculate(input) {
+    var result = '';
 
     try{
         input.match(/\d/)[0];
@@ -72,30 +42,18 @@ function calculate(input) {
     }
 
     input = input.split(' ');
-    console.log(input);
     input.forEach((string) => {
-        switch(string){
-            case ('+'):
-                console.log('Add!');
-                break;
 
-            case('-'):
-                console.log('Subtract!');
-                break;
-
-            case('*'):
-                console.log('multiply!');
-                break;
-
-            case('/'):
-                console.log('divide!');
-                break;
-
-            default:
-                toSeconds(string);
-                break;
+        if(string.length > 1) {
+            string = toSeconds(string);
         }
+
+        result = result + string;
     });
+
+    result = eval(result);
+
+    notate(result);
 }
 
 // document.getElementById('output').innerHTML = '0';
