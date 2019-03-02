@@ -1,0 +1,32 @@
+{
+  "name": "time-calculator",
+  "version": "1.0.0",
+  "description": "functions to calculate periods of time",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thegouge/Time-Calculator.git"
+  },
+  "author": "thegouge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thegouge/Time-Calculator/issues"
+  },
+  "homepage": "https://github.com/thegouge/Time-Calculator#readme",
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "browser": true
+    },
+    "extends": [],
+    "rules": {},
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    }
+  }
+}
