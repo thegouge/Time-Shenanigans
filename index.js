@@ -21,7 +21,7 @@ var buttons = [
   document.getElementById("equals")
 ];
 
-var output = document.getElementById("output");
+const output = document.getElementById("output");
 
 buttons.forEach(function(button) {
   button.addEventListener("click", function() {
@@ -30,7 +30,7 @@ buttons.forEach(function(button) {
 });
 
 function calculate(input) {
-  var result = "";
+  let result = "";
 
   try {
     input.match(/\d/)[0];
@@ -49,5 +49,5 @@ function calculate(input) {
 
   result = eval(result);
 
-  notate(result);
+  output.innerHTML = notate(result);
 }
