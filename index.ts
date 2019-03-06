@@ -1,5 +1,5 @@
-import "logic";
-import math from "math.js";
+import {convertToSeconds, notate} from "./logic";
+import * as math from "mathjs";
 
 exports.evaluateTimeExpression = (inputExpression: string) => {
   if (!/\d[hms]/.test(inputExpression)) {

@@ -1,10 +1,13 @@
 {
-  "name": "time-calculator",
+  "name": "timey-wimey",
   "version": "1.0.0",
   "description": "functions to calculate periods of time",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,7 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true,
-      "browser": true
+      "node": true
     },
     "extends": [],
     "rules": {},
@@ -30,6 +32,13 @@
     }
   },
   "devDependencies": {
-    "eslint": "^5.14.1"
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "mocha": "^6.0.2",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/mathjs": "^5.0.1",
+    "mathjs": "^5.6.0"
   }
 }

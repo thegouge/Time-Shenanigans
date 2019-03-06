@@ -5,7 +5,7 @@ function formatInput(input: string | number) {
   return input;
 }
 
-function convertToSeconds(inputString: string) {
+export function convertToSeconds(inputString: string) {
   const letterMatch = inputString.match(/\d{1,}[hms]/g);
 
   if (letterMatch) {
@@ -41,7 +41,7 @@ function convertToHours(seconds: number) {
   return `${seconds / 3600}h`;
 }
 
-function notate(inputSeconds: number) {
+export function notate(inputSeconds: number) {
   let seconds = inputSeconds;
   let hours = 0;
   let minutes = 0;
