@@ -33,14 +33,14 @@ export function convertToSeconds(inputString: string) {
   }
 }
 
-function convertToMinutes(input: string) {
+export function convertToMinutes(input: string) {
   const seconds = convertToSeconds(input);
-  return `${seconds / 60}m`;
+  return seconds / 60;
 }
 
-function convertToHours(input: string) {
+export function convertToHours(input: string) {
   const seconds = convertToSeconds(input);
-  return `${seconds / 3600}h`;
+  return seconds / 3600;
 }
 
 export function notate(inputSeconds: number) {
