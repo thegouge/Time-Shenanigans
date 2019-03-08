@@ -32,12 +32,16 @@ function convertToSeconds(inputString) {
     }
 }
 exports.convertToSeconds = convertToSeconds;
-function convertToMinutes(seconds) {
-    return seconds / 60 + "m";
+function convertToMinutes(input) {
+    var seconds = convertToSeconds(input);
+    return seconds / 60;
 }
-function convertToHours(seconds) {
-    return seconds / 3600 + "h";
+exports.convertToMinutes = convertToMinutes;
+function convertToHours(input) {
+    var seconds = convertToSeconds(input);
+    return seconds / 3600;
 }
+exports.convertToHours = convertToHours;
 function notate(inputSeconds) {
     var seconds = inputSeconds;
     var hours = 0;

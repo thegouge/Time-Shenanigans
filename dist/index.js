@@ -9,11 +9,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var logic_1 = require("./logic");
 var math = __importStar(require("mathjs"));
-exports.evaluateTimeExpression = function (inputExpression) {
-    if (!/\d[hms]/.test(inputExpression)) {
+function checkIfNotFormatted(input) {
+    if (!/\d[hms]/.test(input)) {
         console.log("invalid string input for 'evaluateTimeExpression', expecting '*h*m*s' format");
-        return;
+        return true;
     }
+    return false;
+}
+exports.evaluateTimeExpression = function (inputExpression) {
+    if (checkIfNotFormatted(inputExpression))
+        return;
     var formattedTimes = inputExpression.replace(/([hms])([\/*+-])(\d)/, "$1 $2 $3");
     var expressionInSeconds = formattedTimes
         .split(" ")
@@ -22,4 +27,19 @@ exports.evaluateTimeExpression = function (inputExpression) {
     })
         .join(" ");
     return logic_1.notate(math.eval(expressionInSeconds));
+};
+exports.resolveToSeconds = function (inputExpression) {
+    if (checkIfNotFormatted(inputExpression))
+        return;
+    return logic_1.convertToSeconds(inputExpression) + "s";
+};
+exports.resolveToMinutes = function (inputExpression) {
+    if (checkIfNotFormatted(inputExpression))
+        return;
+    return logic_1.convertToMinutes(inputExpression) + "m";
+};
+exports.resolveToHours = function (inputExpression) {
+    if (checkIfNotFormatted(inputExpression))
+        return;
+    return logic_1.convertToHours(inputExpression) + "h";
 };

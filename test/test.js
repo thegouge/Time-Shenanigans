@@ -3,7 +3,7 @@
 const expect = require("chai").expect;
 const index = require("../dist/index.js");
 
-describe("expression evaluation", () => {
+describe("Evaluate Time Expression", () => {
   it("Should return the proper format for time", () => {
     const result = index.evaluateTimeExpression("1h1m1s");
     expect(result).to.equal("1h1m1s");
@@ -59,5 +59,26 @@ describe("expression evaluation", () => {
 
     result = index.evaluateTimeExpression("1h/2");
     expect(result).to.equal("30m");
+  });
+});
+
+describe("Resolve to Seconds", () => {
+  it("Should properly resolve to even time measurements", () => {
+    const result = index.resolveToSeconds("1m");
+    expect(result).to.equal("60s");
+  });
+});
+
+describe("Resolve to Minutes", () => {
+  it("Should properly resolve to even time measurements", () => {
+    const result = index.resolveToMinutes("1h");
+    expect(result).to.equal("60m");
+  });
+});
+
+describe("Resolve to Hours", () => {
+  it("Should properly resolve to even time measurements", () => {
+    const result = index.resolveToHours("60m");
+    expect(result).to.equal("1h");
   });
 });
