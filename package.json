@@ -1,6 +1,6 @@
 {
   "name": "time-shenanigans",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "functions to calculate periods of time",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
