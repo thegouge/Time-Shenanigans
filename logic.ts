@@ -33,11 +33,13 @@ export function convertToSeconds(inputString: string) {
   }
 }
 
-function convertToMinutes(seconds: number) {
+function convertToMinutes(input: string) {
+  const seconds = convertToSeconds(input);
   return `${seconds / 60}m`;
 }
 
-function convertToHours(seconds: number) {
+function convertToHours(input: string) {
+  const seconds = convertToSeconds(input);
   return `${seconds / 3600}h`;
 }
 
@@ -56,5 +58,9 @@ export function notate(inputSeconds: number) {
     hours++;
   }
 
-  return `${hours}h${minutes}m${seconds}s`;
+  const hourString = hours === 0 ? "" : `${hours}h`;
+  const minuteString = minutes === 0 ? "" : `${minutes}m`;
+  const secondString = seconds === 0 ? "" : `${seconds}s`;
+
+  return hourString + minuteString + secondString || "0s";
 }

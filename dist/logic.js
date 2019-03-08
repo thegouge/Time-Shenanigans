@@ -50,6 +50,9 @@ function notate(inputSeconds) {
         minutes -= 60;
         hours++;
     }
-    return hours + "h" + minutes + "m" + seconds + "s";
+    var hourString = hours === 0 ? "" : hours + "h";
+    var minuteString = minutes === 0 ? "" : minutes + "m";
+    var secondString = seconds === 0 ? "" : seconds + "s";
+    return hourString + minuteString + secondString || "0s";
 }
 exports.notate = notate;
