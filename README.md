@@ -1,4 +1,4 @@
-# Timey-Wimey
+# Time-Shenanigans
 
 An Application that resolves expressions of 'hms' formatted time strings
 (also supports TypeScript!)
@@ -6,7 +6,7 @@ An Application that resolves expressions of 'hms' formatted time strings
 ## Installation
 
 ```sh
-npm i timey-wimey --save
+npm i time-shenanigans --save
 
 yarn add timey-wimey
 ```

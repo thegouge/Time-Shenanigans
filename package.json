@@ -1,5 +1,5 @@
 {
-  "name": "timey-wimey",
+  "name": "time-shenanigans",
   "version": "1.0.0",
   "description": "functions to calculate periods of time",
   "main": "dist/index.js",
