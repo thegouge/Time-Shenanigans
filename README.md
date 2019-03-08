@@ -8,7 +8,7 @@ An Application that resolves expressions of 'hms' formatted time strings
 ```sh
 npm i time-shenanigans --save
 
-yarn add timey-wimey
+yarn add time-shenanigans
 ```
 
 ## Usage
@@ -16,14 +16,14 @@ yarn add timey-wimey
 ### JavaScript
 
 ```JavaScript
-const time = require('timey-wimey');
+const time = require('time-shenanigans');
 console.log(time.evaluateTimeExpression("1h6m15s + 60s"); // output: "1h7m15s"
 ```
 
 ### TypeScript
 
 ```TypeScript
-import { resolveToHours } from 'timey-wimey';
+import { resolveToHours } from 'time-shenanigans';
 
 console.log(resolveToHours("3600s"); // ouput: "1h"
 ```
