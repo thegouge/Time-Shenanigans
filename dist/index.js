@@ -16,7 +16,7 @@ function checkIfNotFormatted(input) {
     }
     return false;
 }
-exports.evaluateTimeExpression = function (inputExpression) {
+function evaluateTimeExpression(inputExpression) {
     if (checkIfNotFormatted(inputExpression))
         return;
     var formattedTimes = inputExpression.replace(/([hms])([\/*+-])(\d)/, "$1 $2 $3");
@@ -27,19 +27,23 @@ exports.evaluateTimeExpression = function (inputExpression) {
     })
         .join(" ");
     return logic_1.notate(math.eval(expressionInSeconds));
-};
-exports.resolveToSeconds = function (inputExpression) {
+}
+exports.evaluateTimeExpression = evaluateTimeExpression;
+function resolveToSeconds(inputExpression) {
     if (checkIfNotFormatted(inputExpression))
         return;
     return logic_1.convertToSeconds(inputExpression) + "s";
-};
-exports.resolveToMinutes = function (inputExpression) {
+}
+exports.resolveToSeconds = resolveToSeconds;
+function resolveToMinutes(inputExpression) {
     if (checkIfNotFormatted(inputExpression))
         return;
     return logic_1.convertToMinutes(inputExpression) + "m";
-};
-exports.resolveToHours = function (inputExpression) {
+}
+exports.resolveToMinutes = resolveToMinutes;
+function resolveToHours(inputExpression) {
     if (checkIfNotFormatted(inputExpression))
         return;
     return logic_1.convertToHours(inputExpression) + "h";
-};
+}
+exports.resolveToHours = resolveToHours;

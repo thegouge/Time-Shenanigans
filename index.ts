@@ -16,7 +16,7 @@ function checkIfNotFormatted(input: string) {
   return false;
 }
 
-exports.evaluateTimeExpression = (inputExpression: string) => {
+export function evaluateTimeExpression(inputExpression: string) {
   if (checkIfNotFormatted(inputExpression)) return;
 
   const formattedTimes = inputExpression.replace(
@@ -32,19 +32,19 @@ exports.evaluateTimeExpression = (inputExpression: string) => {
     .join(" ");
 
   return notate(math.eval(expressionInSeconds));
-};
+}
 
-exports.resolveToSeconds = (inputExpression: string) => {
+export function resolveToSeconds(inputExpression: string) {
   if (checkIfNotFormatted(inputExpression)) return;
   return convertToSeconds(inputExpression) + "s";
-};
+}
 
-exports.resolveToMinutes = (inputExpression: string) => {
+export function resolveToMinutes(inputExpression: string) {
   if (checkIfNotFormatted(inputExpression)) return;
   return convertToMinutes(inputExpression) + "m";
-};
+}
 
-exports.resolveToHours = (inputExpression: string) => {
+export function resolveToHours(inputExpression: string) {
   if (checkIfNotFormatted(inputExpression)) return;
   return convertToHours(inputExpression) + "h";
-};
+}
