@@ -1,5 +1,9 @@
 # Time-Shenanigans
 
+[![Build Status](https://travis-ci.org/thegouge/Time-Calculator.svg?branch=master)](https://travis-ci.org/thegouge/Time-Calculator)
+
+[![Coverage Status](https://coveralls.io/repos/github/thegouge/Time-Calculator/badge.svg?branch=master)](https://coveralls.io/github/thegouge/Time-Calculator?branch=master)
+
 An Application that resolves expressions of 'hms' formatted time strings
 (also supports TypeScript!)
 
