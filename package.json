@@ -41,7 +41,7 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
-    "@types/mathjs": "^6.0.0",
-    "mathjs": "^6.0.3"
+    "@types/mathjs": "^6.0.3",
+    "mathjs": "^6.5.0"
   }
 }
